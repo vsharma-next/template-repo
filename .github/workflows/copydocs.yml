@@ -1,20 +1,9 @@
-name: copy-docs
+name: test
+on: push
 
-# Only run this when the main branch changes
-on:
-  push:
-    branches:
-      - main
-      
-# This job lists all files in the repo
 jobs:
-  copy-docs:
+  name-of-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Lists all files
-        run: |
-          ls ./*
-          
-      - name: echo path
-        run: |
-          echo $PWD
+      - name: my-step
+        run: echo "Hello World!"
