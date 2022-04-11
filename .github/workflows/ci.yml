@@ -23,6 +23,6 @@ jobs:
           destination-github-username: 'vsharma-next'
           destination-repository-name: 'vsharma-next.github.io'
           user-email: vsharma-next@gmail.com
-          commit-message: TEST
+          commit-message: updating from ${{ github.event.repository.name }}
           target-branch: main
           target-directory: ${{ github.event.repository.name }}
