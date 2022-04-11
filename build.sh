@@ -16,7 +16,7 @@ find ./output -type f ! -name "*.md" -and ! -name "*.ipynb" -delete
 
 cd output/
 
-path="${PWD}"
+path="${1}"
 echo $path
 
 sed -i "s~GITHUB-URL~$path~g" README.md
