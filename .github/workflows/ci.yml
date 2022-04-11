@@ -25,4 +25,4 @@ jobs:
           user-email: vsharma-next@gmail.com
           commit-message: TEST
           target-branch: main
-          target-directory: newrepo
+          target-directory: ${{ github.event.repository.name }}
