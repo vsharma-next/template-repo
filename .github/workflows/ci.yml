@@ -1,0 +1,27 @@
+# This is a basic workflow to build a 'docs' folder and copy to vsharma-next.github.io repo
+
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+    
+jubs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: creates a repo docs folder
+        run: sh ./build.sh
+      - name: Pushes to another repository
+        id: push_directory
+        uses: vsharma-next/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: output/
+          destination-github-username: 'vsharma-next'
+          distination-repository-name: 'vsharma-next.github.io'
+          user-email: vsharma-next@gmail.com
+          commit-message: TEST
+          target-branch: main
