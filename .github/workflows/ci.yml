@@ -4,15 +4,15 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
-    
+    branches: [main]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: creates a repo docs folder
-        run: sh ./build.sh ${{ github.repositoryUrl }}
+        run: sh ./makedocs.sh ${{ github.repositoryUrl }}
       - name: Pushes to another repository
         id: push_directory
         uses: vsharma-next/github-action-push-to-another-repository@main
