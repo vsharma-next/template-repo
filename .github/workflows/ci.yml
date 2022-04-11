@@ -25,4 +25,4 @@ jobs:
           user-email: vsharma-next@gmail.com
           commit-message: TEST
           target-branch: main
-	  target-directory: new_repo
+	  target-directory: newrepo
