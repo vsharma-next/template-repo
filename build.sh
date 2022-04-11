@@ -17,5 +17,7 @@ echo $path
 
 sed -i "s~GITHUB-URL~$path~g" README.md
 
+more README.md
+
 cd ..
 
