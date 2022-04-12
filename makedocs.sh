@@ -6,7 +6,7 @@ set -u # script fails if trying to access to an undefined variable
 mkdir output
 
 find . -maxdepth 1 -not -path './output' -not -path '.' -not -path '*/.*' -exec cp -r '{}' output/ \;
-find ./output -type f ! -name "*.md" -and ! -name "*.ipynb" -delete
+find ./output -type f ! -name "*.md" -and ! -name "*.ipynb" -and ! -name "*.png" -delete
 
 cd output/
 
